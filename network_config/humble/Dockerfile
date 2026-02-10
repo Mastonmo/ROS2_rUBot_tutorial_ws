@@ -68,6 +68,13 @@ RUN set -eux; \
     apt-get install -y --no-install-recommends code; \
     rm -rf /var/lib/apt/lists/*
 
+# Networking tools (REQUIRED)
+RUN apt-get update && apt-get install -y \
+    iproute2 \
+    iputils-ping \
+    net-tools \
+    && rm -rf /var/lib/apt/lists/*
+
 # Optional: YOLO (uncomment and adapt if needed)
 #RUN pip3 install --no-cache-dir ultralytics "numpy<1.24"
 

@@ -47,3 +47,9 @@ You are ready to work inside the container and to connect to the robot hardware 
     docker ps -a               # containers
     docker images              # images
     ```
+- To modify the `Dockerfile`, build and push to DockerHub, you can follow the instructions:
+    ````bash
+    docker build -t manelpuig/ros2-humble-biorobub-pc:latest .
+    docker login
+    docker push manelpuig/ros2-humble-biorobub-pc:latest
+    ````
