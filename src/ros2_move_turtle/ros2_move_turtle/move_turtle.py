@@ -36,7 +36,7 @@ class MoveTurtle(Node):
                 self.stopped = True
         else:
             # Sino, nos movemos
-            self.cmd.linear.x = 2.0
+            self.cmd.linear.x = 0.2
             self.cmd.angular.z = 0.0
 
         self.publisher.publish(self.cmd)
